@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roadie Packer - History</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#30b4e8",
+                "background-light": "#f6f7f8",
+                "background-dark": "#111d21",
+                "surface-light": "#ffffff",
+                "surface-dark": "#1a2c32",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk", "sans-serif"],
+                "body": ["Noto Sans", "sans-serif"],
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 h-screen flex flex-col overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex-none bg-background-light dark:bg-background-dark p-4 pb-2 flex items-center justify-between z-10">
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">History</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">filter_list</span>
+</button>
+</header>
+<!-- Filter Chips -->
+<div class="flex-none px-4 pb-4 overflow-x-auto no-scrollbar">
+<div class="flex gap-3">
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-xl bg-primary text-white pl-3 pr-4 shadow-sm shadow-primary/30 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span class="text-sm font-bold">All</span>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-3 pr-4 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-emerald-500">check_circle</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Fits</span>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-3 pr-4 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-red-500">cancel</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Doesn't Fit</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<main class="flex-1 overflow-y-auto px-4 pb-24 space-y-4 no-scrollbar">
+<!-- Date Header -->
+<div class="pt-2">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2 pl-1">Today</h3>
+<!-- Card 1: Fits -->
+<div class="group relative flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-slate-100 dark:border-slate-800 active:scale-[0.99] transition-transform duration-200 cursor-pointer mb-4">
+<div class="flex flex-col justify-between flex-[2] gap-3">
+<div class="flex items-start justify-between">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 dark:text-emerald-400 font-bold">check_circle</span>
+<span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">Fits</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">9:41 AM</span>
+</div>
+<div>
+<h4 class="text-lg font-bold leading-tight text-slate-900 dark:text-white mb-1">2020 Honda Civic</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<p class="text-sm font-medium font-body">2 Packages (L, XL)</p>
+</div>
+</div>
+</div>
+<div class="relative w-full sm:w-28 aspect-video sm:aspect-square bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden flex-none">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Open trunk of a silver sedan showing cargo space" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJjZSnjNow8C9cDzicDO9VnqcCZEi3tDsyhnpClWbs8YSSuINp5kPnSf79Xuwi5pgBKkoPFPoqZpuw35fvGnPzmHI9WGDMsA_kbsMaTGl-tztM_XrtgLMIPiAHRv7WWXoBO-VsbWs-2APb00kfW5gFah3OfTtLj4y21Sbi0VLDjiOsDEAqe2mqq4asVAu7zi-_WtAxa6tlxvv5YSsgY1vABXbJHthOwovRS9mbmNpbuH1hCwD2wLXozNObGtLAaBeLYFs0x4igZjzj');"></div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+</div>
+<!-- Card 2: Doesn't Fit -->
+<div class="group relative flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-slate-100 dark:border-slate-800 active:scale-[0.99] transition-transform duration-200 cursor-pointer">
+<div class="flex flex-col justify-between flex-[2] gap-3">
+<div class="flex items-start justify-between">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-red-100 dark:bg-red-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-red-600 dark:text-red-400 font-bold">error</span>
+<span class="text-xs font-bold text-red-700 dark:text-red-400 uppercase tracking-wide">Doesn't Fit</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">8:15 AM</span>
+</div>
+<div>
+<h4 class="text-lg font-bold leading-tight text-slate-900 dark:text-white mb-1">2020 Honda Civic</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<p class="text-sm font-medium font-body">1 Oversized Item</p>
+</div>
+</div>
+</div>
+<div class="relative w-full sm:w-28 aspect-video sm:aspect-square bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden flex-none">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Large cardboard box sitting on pavement next to a car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-s3SPBtho3uN1YsDTH0scee4ThZRk5wCAEmrQcpHUKQ1S-j0knOiWyip20dsatGDIE-4LdCciFE8eIxQ3j4a2gwarnjdhw3JiRbtc_X7U-NSUa4zVyjYTUUfUfJ28g_nVdGnv8Qlo24onEGocf4Hms3WZT2tPeuGjwNB_qijrtIdIsT0sD6vilk6MMUXL7FGz106Yg4zNVTDg5t6qV5JdhreTQN-L4GHO7RPGZyQR7xaLNo7RnNa0SZ-aef_T4TK-R5Tj-G7zVxpS');"></div>
+<div class="absolute inset-0 bg-red-500/10 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+<!-- Date Header -->
+<div class="pt-4">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2 pl-1">Yesterday</h3>
+<!-- Card 3: Fits -->
+<div class="group relative flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-slate-100 dark:border-slate-800 active:scale-[0.99] transition-transform duration-200 cursor-pointer mb-4">
+<div class="flex flex-col justify-between flex-[2] gap-3">
+<div class="flex items-start justify-between">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 dark:text-emerald-400 font-bold">check_circle</span>
+<span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">Fits</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">4:30 PM</span>
+</div>
+<div>
+<h4 class="text-lg font-bold leading-tight text-slate-900 dark:text-white mb-1">My Sedan</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<p class="text-sm font-medium font-body">4 Small Boxes</p>
+</div>
+</div>
+</div>
+<div class="relative w-full sm:w-28 aspect-video sm:aspect-square bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden flex-none">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract 3d wireframe visualization of car trunk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC52GlyFh6ychQA5wJXeoibyUs_rxPiHcYb9j_-6tGoekwcRlxMpQMqb0p_nrVgpULdnLWVB5-es5wTD9Vrupf6eHcgk0XOw02PumPTXedpy_bGBo8LSGkmm_0diWiyWp6esoDtuPrONOI95DiLjydJyFyyxw5xwEsAj74JHumvwJI8_FBzba3wYS5JP8qnpoLRM7IwXaXJ3Ppt2bvbx0Y9wo9kR9LD6RwERswdJ7bq72_wY1RSCndjmCaM0zXHG5p7b1eSF-L9Zo9z');"></div>
+</div>
+</div>
+</div>
+<!-- Date Header -->
+<div class="pt-2">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2 pl-1">Oct 20</h3>
+<!-- Card 4: Fits -->
+<div class="group relative flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-slate-100 dark:border-slate-800 active:scale-[0.99] transition-transform duration-200 cursor-pointer">
+<div class="flex flex-col justify-between flex-[2] gap-3">
+<div class="flex items-start justify-between">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 dark:text-emerald-400 font-bold">check_circle</span>
+<span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">Fits</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500">11:00 AM</span>
+</div>
+<div>
+<h4 class="text-lg font-bold leading-tight text-slate-900 dark:text-white mb-1">Rental Van</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<p class="text-sm font-medium font-body">5 Packages</p>
+</div>
+</div>
+</div>
+<div class="relative w-full sm:w-28 aspect-video sm:aspect-square bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden flex-none">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="White cargo van parked on a street" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdADQRk2BjLzXwL3ljr-oU8Gc5nhckBJAsuN8loTBox1GXSAQqVCcb3oyEwTtCjdAK-VutCvgCNsDltjjq4SOcKwF91GQDGsvJWsGy5QVwSqCWVzQUEh1b8w0e9dnj38MXuKmawogGnJC0CtumMvzA66KXswTxLNy3YsVG3m63DXx2j2xSHSsBVLjbh5BVUC6BxgC6ndWVJcPUPocsvSZIsNYfu8gWFLX6wmHk6bFm1QWauyNBG9IwH8mfAIAwJqYn73H4oAGlHlmu');"></div>
+</div>
+</div>
+</div>
+<!-- Bottom padding to clear nav -->
+<div class="h-8"></div>
+</main>
+<!-- Floating Action Button (Optional but recommended in plan) -->
+<button class="fixed right-4 bottom-24 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-slate-900/30 dark:bg-primary dark:text-white dark:shadow-primary/30 transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" style="font-size: 28px;">add</span>
+</button>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe pt-2 px-6 h-[80px] pb-6 flex items-center justify-between">
+<button class="group flex flex-col items-center gap-1 p-2 w-16 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">qr_code_scanner</span>
+<span class="text-[10px] font-bold tracking-wide">Scan</span>
+</button>
+<button class="group flex flex-col items-center gap-1 p-2 w-16 text-primary dark:text-primary">
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="text-[10px] font-bold tracking-wide">History</span>
+</button>
+<button class="group flex flex-col items-center gap-1 p-2 w-16 text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">settings</span>
+<span class="text-[10px] font-bold tracking-wide">Settings</span>
+</button>
+</nav>
+</body></html>

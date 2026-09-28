@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fit Assessment &amp; 3D Visualization</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#89cfeb",
+              "background-light": "#f6f7f8",
+              "background-dark": "#121c20",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1c2a30",
+              "success": "#89cfeb", // Using primary as success per request
+              "warning": "#fca5a5", // Soft coral/salmon for alerts
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            boxShadow: {
+                "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                "glow": "0 0 15px rgba(137, 207, 235, 0.3)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0f171a] dark:text-slate-100 font-display h-screen w-full flex flex-col overflow-hidden antialiased">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between p-4 pb-2 shrink-0 z-10">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Fit Assessment</h2>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</header>
+<!-- Scrollable Main Content Area -->
+<main class="flex-1 flex flex-col min-h-0 relative">
+<!-- Status Notification -->
+<div class="px-4 pb-4 shrink-0 z-10">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-soft ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2 text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+<p class="text-xl font-bold leading-tight">It Fits!</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal pl-8">All packages fit in 2018 Toyota Prius</p>
+</div>
+<div class="flex flex-col items-end justify-center">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Confidence</span>
+<span class="text-primary text-lg font-bold">98%</span>
+</div>
+</div>
+</div>
+<!-- 3D Viewport Container -->
+<div class="flex-1 relative mx-4 mb-4 rounded-2xl overflow-hidden bg-[#e8eff2] dark:bg-[#152025] shadow-inner group isolate">
+<!-- 3D Canvas Placeholder -->
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 mix-blend-multiply dark:mix-blend-normal" data-alt="3D wireframe visualization of a car trunk with colorful boxes packed inside" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByhG48dh2h1eq_PNjy5vJfiokg1MgnwI11_whiIoes6grlH4aRvS-Zrr4glkFFb8Z3SxE6c5Jo8glLnB-LNjevaa-wPdCbypSGFBf9A_3j9-RCwrIW5RG83lFXqVhoIlkeGDjlPrCZfFkVyKfTREsW4KODEJZG2rrIGNf4WNxIYPKYDvgYKV04ZTi7YxFQKdEQ5x4iP_6F8COT2vNA_LpRtjnjePl3N-YDXLIdhPAnPoqrr8oc3tdkLy2FkK1C9snP9VcnDMhe_g9K");'>
+</div>
+<!-- 3D Overlay UI: Top Right Actions -->
+<div class="absolute top-4 right-4 flex flex-col gap-3 z-20">
+<button class="size-10 bg-surface-light/90 dark:bg-surface-dark/80 backdrop-blur-md rounded-full shadow-sm flex items-center justify-center text-slate-700 dark:text-white hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">layers</span>
+</button>
+<button class="size-10 bg-surface-light/90 dark:bg-surface-dark/80 backdrop-blur-md rounded-full shadow-sm flex items-center justify-center text-slate-700 dark:text-white hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</button>
+</div>
+<!-- 3D Overlay UI: Center Interaction Hint -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
+<span class="text-white text-xs font-medium tracking-wide">Interactive 3D View</span>
+</div>
+</div>
+<!-- 3D Overlay UI: Bottom Controls -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/20 to-transparent">
+<p class="text-white/90 text-xs font-medium text-center mb-3 drop-shadow-md">Pinch to zoom, drag to rotate.</p>
+<!-- Button Group -->
+<div class="flex gap-2 justify-center max-w-[400px] mx-auto">
+<button class="flex-1 h-10 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md text-slate-900 dark:text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg border border-white/20 flex items-center justify-center gap-2 hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="truncate hidden sm:inline">Reset</span>
+</button>
+<button class="flex-1 h-10 bg-primary text-slate-900 text-xs font-bold uppercase tracking-wider rounded-lg shadow-glow flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">grid_4x4</span>
+<span class="truncate">Wireframe</span>
+</button>
+<button class="flex-1 h-10 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md text-slate-900 dark:text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg border border-white/20 flex items-center justify-center gap-2 hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_full</span>
+<span class="truncate hidden sm:inline">Expand</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Sheet / Action Area -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-t-[2rem] shadow-[0_-8px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5 dark:ring-white/5 relative z-30 shrink-0 transition-transform duration-300">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-3 pb-1 cursor-pointer">
+<div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+<div class="px-6 pb-8 pt-2">
+<!-- Summary Stats -->
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Package Manifest</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-slate-400 text-sm">inventory_2</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">3 items scanned</p>
+<span class="text-slate-300">•</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">85% volume used</p>
+</div>
+</div>
+<button class="size-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">keyboard_arrow_up</span>
+</button>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-[#0f171a] dark:bg-primary hover:opacity-90 active:scale-[0.98] text-white dark:text-[#0f171a] h-14 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all shadow-lg dark:shadow-glow">
+<span>Confirm Load</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roadie Packer - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#F6851B",
+              "primary-hover": "#D96E0E",
+              "background-light": "#ffffff",
+              "background-dark": "#121212",
+              "text-main": "#2D2D2D",
+              "text-secondary": "#757575",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+            boxShadow: {
+                "soft": "0 8px 30px rgba(0,0,0,0.04)",
+                "glow": "0 4px 20px rgba(246, 133, 27, 0.3)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-body antialiased overflow-hidden selection:bg-primary/30">
+<div class="relative flex h-screen w-full flex-col justify-between overflow-hidden group/design-root">
+<header class="w-full flex justify-center items-center py-6 pt-14 z-10 shrink-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">deployed_code</span>
+<h4 class="text-text-main dark:text-white text-xl font-bold tracking-tight">Roadie Packer</h4>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full relative">
+<div class="w-full flex-1 flex flex-col justify-center items-center px-4 min-h-[40vh]">
+<div class="w-full h-full max-h-[50vh] bg-center bg-contain bg-no-repeat transition-transform duration-700 ease-out hover:scale-105" data-alt="3D illustration of a white delivery van with translucent blue boxes perfectly stacked inside demonstrating smart packing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAGG9X2tBn7Qdie_8SThd5FG1IyR5BlzR1EH-YATykrhQq4MOVN4MJolNWtuXbyvxiqWYTpSd4YGO3sCfjRHFW4J0FukJ2qKsWD4JEQIlo1utHdSubhP0C4dxNMrYbUxc4N-wQmzE6m5k9HSnLv6KwGgbLEOP-4TMZFqit--H4dzSnxXyax0CAVwLXp51dNBqsro7wBvfeetoLJ55efNVoH4LwnkSlt3nmyNBsxU3EUzegqpjshWc_pP9sWGMs5-W3QhS0-eQ51LUL");'>
+</div>
+</div>
+<div class="w-full px-8 pb-4 flex flex-col items-center text-center z-10">
+<div class="flex w-full flex-row items-center justify-center gap-2.5 py-6 mb-2">
+<div class="h-2 w-8 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+<div class="h-2 w-2 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<h1 class="text-text-main dark:text-white tracking-tight text-[32px] md:text-[36px] font-extrabold leading-[1.1] pb-3">
+                    Smart Packing <br/> for Pros
+                </h1>
+<p class="text-text-secondary dark:text-gray-400 text-base font-normal leading-relaxed px-2 max-w-sm">
+                    Stop guessing. Use AI to scan packages and see exactly how they fit in your vehicle instantly.
+                </p>
+</div>
+</main>
+<footer class="w-full px-6 pb-10 pt-4 shrink-0 bg-background-light dark:bg-background-dark z-20">
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-bold text-lg py-4 rounded-xl shadow-glow transition-all active:scale-[0.98] flex items-center justify-center gap-2 mb-5">
+<span>Start Packing</span>
+<span class="material-symbols-outlined text-[22px] font-bold">arrow_forward</span>
+</button>
+<div class="text-center">
+<p class="text-sm text-text-secondary dark:text-gray-500 font-medium">
+                    Already have an account? 
+                    <a class="text-primary hover:text-primary-hover font-bold transition-colors ml-1" href="#">Log In</a>
+</p>
+</div>
+</footer>
+<div class="absolute top-1/4 -left-20 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+<div class="absolute bottom-1/4 -right-10 w-64 h-64 bg-yellow-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+</div>
+
+</body></html>

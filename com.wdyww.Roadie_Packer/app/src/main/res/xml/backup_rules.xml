@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+   In this file you can specify which files/directories should be backed up.
+   You can use "include" and "exclude" to control which files are backed up.
+   By default, all files in the getFilesDir() directory are backed up.
+   The following is a common example of what to include in your backup rules.
+    -->
+    <include domain="file" path="."/>
+    <include domain="database" path="."/>
+    <include domain="sharedpref" path="."/>
+    <include domain="external" path="."/>
+</full-backup-content>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roadie Packer - Manifest Upload</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#89cfeb",
+                        "primary-dark": "#5bb6dc",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#121c20",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a262c",
+                        "text-main-light": "#0f171a",
+                        "text-main-dark": "#e2e8f0",
+                        "text-sub-light": "#4b5563",
+                        "text-sub-dark": "#94a3b8",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-200 font-display selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-hidden pb-24">
+<!-- Top App Bar -->
+<header class="flex items-center px-6 py-5 justify-between sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold leading-tight tracking-tight">New Manifest</h1>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-primary-dark dark:text-primary">
+<span class="material-symbols-outlined text-2xl">help</span>
+</button>
+</header>
+<main class="flex flex-col px-4 gap-6">
+<!-- Hero Upload Zone -->
+<section class="mt-2">
+<div class="group relative flex flex-col items-center gap-6 rounded-2xl border-2 border-dashed border-primary/40 bg-surface-light dark:bg-surface-dark px-6 py-10 transition-all hover:border-primary hover:bg-primary/5">
+<!-- Decorative background element -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl pointer-events-none"></div>
+<div class="relative flex flex-col items-center gap-3 z-10">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary-dark dark:text-primary mb-2">
+<span class="material-symbols-outlined text-4xl">add_a_photo</span>
+</div>
+<h2 class="text-xl font-bold text-center">Upload Screenshot</h2>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm text-center max-w-[260px] leading-relaxed">
+                            Take a screenshot of your delivery manifest. We support JPG and PNG formats.
+                        </p>
+</div>
+<button class="relative z-10 flex w-full max-w-[240px] cursor-pointer items-center justify-center rounded-xl h-12 bg-primary hover:bg-primary-dark text-slate-900 font-bold tracking-wide transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined mr-2 text-xl">upload_file</span>
+                        Select File
+                    </button>
+</div>
+</section>
+<!-- How It Works Section -->
+<section>
+<div class="flex items-center justify-between mb-3 px-1">
+<h3 class="text-lg font-bold tracking-tight">How it works</h3>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<!-- Step 1 -->
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-surface-light dark:bg-surface-dark p-4 items-center text-center shadow-sm">
+<div class="text-primary-dark dark:text-primary p-2 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-2xl">cloud_upload</span>
+</div>
+<span class="text-xs font-bold leading-tight">Upload<br/>Screenshot</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-surface-light dark:bg-surface-dark p-4 items-center text-center shadow-sm">
+<div class="text-primary-dark dark:text-primary p-2 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+</div>
+<span class="text-xs font-bold leading-tight">AI<br/>Scanning</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-surface-light dark:bg-surface-dark p-4 items-center text-center shadow-sm">
+<div class="text-primary-dark dark:text-primary p-2 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-2xl">deployed_code</span>
+</div>
+<span class="text-xs font-bold leading-tight">See<br/>Visualization</span>
+</div>
+</div>
+</section>
+<!-- Recent Scans Section -->
+<section>
+<div class="flex items-center justify-between mb-3 px-1 mt-2">
+<h3 class="text-lg font-bold tracking-tight">Recent Scans</h3>
+<button class="text-xs font-bold text-primary-dark dark:text-primary">View All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Card 1: Success -->
+<div class="group flex items-center gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 relative">
+<!-- Abstract pattern placeholder for a document thumbnail -->
+<img alt="Manifest Thumbnail" class="h-full w-full object-cover opacity-80" data-alt="Abstract blue geometric pattern representing a scanned document thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFhuWytGxRADjJTzq2jA9gUjOqqJEFdNTDVQfQX5Ys1YhHfTs0Nvws-gxJGw7GHcVv8sHt1Yoai5n01w-a6R02hKO6djY3FLTWMJKHCWztpCi0SIujngX2paEKgythhUkRKLXOvV2D1PQgE6qDd_poCxyVY9j-odWXLPg1L38idlPmxOTTfJCoh5fX6328Px3RqL6aXwW1MJEyi8HUKDHM5a2PZUTt7anS7itJVeGKh4epzN3C6_hXGG6gi4p7HXP6oPfN9LEc1dNl"/>
+</div>
+<div class="flex flex-1 flex-col">
+<h4 class="font-bold text-sm">Manifest #8821</h4>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark mt-0.5">4 Packages • Today, 10:30 AM</span>
+</div>
+<div class="flex items-center gap-1 rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 text-sm">check_circle</span>
+<span class="text-xs font-bold text-green-700 dark:text-green-400">Fits</span>
+</div>
+</div>
+<!-- Card 2: Warning -->
+<div class="group flex items-center gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-transparent hover:border-primary/30 transition-all">
+<div class="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 relative">
+<!-- Abstract pattern placeholder for a document thumbnail -->
+<img alt="Manifest Thumbnail" class="h-full w-full object-cover opacity-80" data-alt="Abstract dark geometric pattern representing a scanned document thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe3FkjL1Hv0_KqlhBOxHYevGkL3dzrXldX2FwQe2xMJqU_K7u8WL9nBBBTSTfLWTLGFClxtQVIh-yNYLEUNrQULjUl7GTGDIetOXommoeFNcESOSkcZbPEXjmhtLlAmCy2mYtKgRH2cXD7dBbLZEoFK4UHcAqY8derGClKoaYoJumAaOorKmtnL5cW8FiaLpoeF38d5exrQnESErpSZ7Y4otoSFT4j0_5Tbdn3zjKpgNwTkkbtnm7NZ-qdoFNl9RdwJ18uPDizE29d"/>
+</div>
+<div class="flex flex-1 flex-col">
+<h4 class="font-bold text-sm">Manifest #9902</h4>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark mt-0.5">12 Packages • Yesterday</span>
+</div>
+<div class="flex items-center gap-1 rounded-full bg-orange-100 dark:bg-orange-900/30 px-2.5 py-1">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400 text-sm">warning</span>
+<span class="text-xs font-bold text-orange-700 dark:text-orange-400">Warning</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 dark:border-slate-800 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-lg pb-safe">
+<div class="flex h-16 items-center justify-around max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary-dark dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="group flex flex-col items-center gap-1 p-2">
+<div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-slate-900 shadow-lg shadow-primary/25 -mt-6 ring-4 ring-surface-light dark:ring-surface-dark">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform">add</span>
+</div>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary-dark dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+</div>
+</nav>
+</div>
+<!-- Processing State Simulation (Hidden by default, just conceptual within HTML structure for completeness based on request, though technically static) -->
+<!-- 
+    <div class="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm">
+        <div class="w-[85%] max-w-[320px] rounded-2xl bg-surface-light dark:bg-surface-dark p-6 shadow-2xl text-center">
+            <div class="relative mx-auto mb-4 h-16 w-16">
+                 <div class="absolute inset-0 animate-spin rounded-full border-4 border-primary/30 border-t-primary"></div>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Analyzing Manifest...</h3>
+            <p class="text-sm text-text-sub-light dark:text-text-sub-dark">Extracting package dimensions and quantities.</p>
+        </div>
+    </div> 
+    -->
+</body></html>
